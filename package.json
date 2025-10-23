@@ -1,0 +1,17 @@
+{
+  "name": "evm-wallet-generator",
+  "version": "1.0.0",
+  "description": "EVM wallet generator",
+  "author": "Ryo Komiyama",
+  "license": "MIT",
+  "scripts": {
+    "generate": "tsx src/generate-wallet.ts"
+  },
+  "dependencies": {
+    "tsx": "^4.20.6",
+    "viem": "^2.38.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1"
+  }
+}
