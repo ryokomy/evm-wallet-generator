@@ -7,23 +7,27 @@ const createMnemonic = () => {
   // Generate a random mnemonic with English wordlist
   const mnemonic = generateMnemonic(english);
 
-  // Derive the first account (index 0) from the mnemonic
-  const account = mnemonicToAccount(mnemonic);
-
-  // Get private key from HD key
-  const hdKey = account.getHdKey();
-  const privateKey = hdKey.privateKey
-    ? `0x${Buffer.from(hdKey.privateKey).toString("hex")}`
-    : "N/A";
-
   // Display the generated information
   console.log("\n=== Generated Wallet Information ===\n");
   console.log("Mnemonic Phrase:");
   console.log(`  ${mnemonic}\n`);
-  console.log("First Account (Index 0):");
-  console.log(`  Address:     ${account.address}`);
-  console.log(`  Private Key: ${privateKey}`);
-  console.log("\n=====================================\n");
+
+  // Derive and display accounts for indices 0-4
+  for (let i = 0; i < 5; i++) {
+    const account = mnemonicToAccount(mnemonic, { addressIndex: i });
+
+    // Get private key from HD key
+    const hdKey = account.getHdKey();
+    const privateKey = hdKey.privateKey
+      ? `0x${Buffer.from(hdKey.privateKey).toString("hex")}`
+      : "N/A";
+
+    console.log(`Account ${i}:`);
+    console.log(`  Address:     ${account.address}`);
+    console.log(`  Private Key: ${privateKey}\n`);
+  }
+
+  console.log("=====================================\n");
 };
 
 // Call the function to generate mnemonic

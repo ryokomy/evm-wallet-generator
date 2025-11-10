@@ -14,7 +14,7 @@ Creating mnemonic phrases locally is crucial for security. Never trust online ge
 ## Features
 
 - Generate secure 12-word mnemonic phrases
-- Derive the first account (index 0) with address and private key
+- Derive the first 5 accounts (indices 0-4) with addresses and private keys
 - Built with [viem](https://viem.sh/) - a modern Ethereum library
 - Completely offline and local execution
 
@@ -40,9 +40,25 @@ npm run generate
 Mnemonic Phrase:
   word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12
 
-First Account (Index 0):
+Account 0:
   Address:     0x1234567890abcdef1234567890abcdef12345678
   Private Key: 0xabcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890
+
+Account 1:
+  Address:     0x2234567890abcdef1234567890abcdef12345678
+  Private Key: 0xbbcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890
+
+Account 2:
+  Address:     0x3234567890abcdef1234567890abcdef12345678
+  Private Key: 0xbccdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890
+
+Account 3:
+  Address:     0x4234567890abcdef1234567890abcdef12345678
+  Private Key: 0xbdcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890
+
+Account 4:
+  Address:     0x5234567890abcdef1234567890abcdef12345678
+  Private Key: 0xbecdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890
 
 =====================================
 ```
